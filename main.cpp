@@ -44,12 +44,9 @@ int main(){
     int l1;
     int l2;
     int B;
-
-    cout<<"Please enter a number for l1: ";
+    
     cin >> l1;
-    cout<<"Please enter a number for l2: ";
     cin >> l2;
-    cout<<"Please enter a number for B: ";
     cin >> B;
 
     string stringl1 = to_string(l1);
@@ -60,3 +57,4 @@ int main(){
     cout << sum << endl;
     return 0;
 }
+
