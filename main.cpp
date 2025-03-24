@@ -2,29 +2,29 @@
 using namespace std;
 #include "string"
 
-string schoolMethodAddition(string stringl1, string stringl2, int B){
-    int lenl1;
-    int lenl2;
+string schoolMethodAddition(string stringI1, string stringI2, int B){
+    int lenI1;
+    int lenI2;
 
-    lenl1 = stringl1.size();
-    lenl2 = stringl2.size();
+    lenI1 = stringI1.size();
+    lenI2 = stringI2.size();
 
-    while (lenl1 < lenl2){
-        stringl1 = '0' + stringl1;
-        lenl1++;
+    while (lenI1 < lenI2){
+        stringI1 = '0' + stringI1;
+        lenI1++;
     }
 
-    while (lenl2 > lenl1){
-        stringl2 = '0' + stringl2;
-        lenl2++;
+    while (lenI2 > lenI1){
+        stringI2 = '0' + stringI2;
+        lenI2++;
     }
 
     string sum;
     int current;
     int carry = 0;
 
-    for (int i = lenl1 - 1; i >= 0; i--){
-        current = carry + (stringl1[i] - '0') + (stringl2[i] - '0');
+    for (int i = lenI1 - 1; i >= 0; i--){
+        current = carry + (stringI1[i] - '0') + (stringI2[i] - '0');
 
         carry = current / B;
 
@@ -41,19 +41,14 @@ string schoolMethodAddition(string stringl1, string stringl2, int B){
 
 
 int main(){
-    int l1;
-    int l2;
+    string I1;
+    string I2;
     int B;
-    
-    cin >> l1;
-    cin >> l2;
-    cin >> B;
 
-    string stringl1 = to_string(l1);
-    string stringl2 = to_string(l2);
+    cin >> I1 >> I2 >> B;
 
     string sum;
-    sum = schoolMethodAddition(stringl1, stringl2, B);
+    sum = schoolMethodAddition(I1, I2, B);
     cout << sum << endl;
     return 0;
 }
